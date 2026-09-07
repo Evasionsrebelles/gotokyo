@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Soumettre un lieu — Évasions Rebelles Corée</title>
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="Soumettez votre adresse coup de cœur à Busan et en Corée du Sud pour la partager avec la communauté Évasions Rebelles." />
+  <meta name="author" content="Évasions Rebelles" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://evasionsrebelles.github.io/Evasions-Rebelles-Coree/submit-your-place.html" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Soumettre un lieu — Évasions Rebelles Corée" />
+  <meta property="og:description" content="Soumettez votre adresse coup de cœur à Busan et en Corée du Sud pour la partager avec la communauté Évasions Rebelles." />
+  <meta property="og:url" content="https://evasionsrebelles.github.io/Evasions-Rebelles-Coree/submit-your-place.html" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Evasionsrebelles/Evasions-Rebelles-Coree/main/images/coree-hero.jpg" />
+  <meta property="og:site_name" content="Évasions Rebelles Corée" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Soumettre un lieu — Évasions Rebelles Corée" />
+  <meta name="twitter:description" content="Soumettez votre adresse coup de cœur à Busan et en Corée du Sud pour la partager avec la communauté Évasions Rebelles." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Evasionsrebelles/Evasions-Rebelles-Coree/main/images/coree-hero.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("Uwx7f0RoWs4rnGK4d");</script>
+</head>
+<body style="display:flex; flex-direction:column; min-height:100vh; background:#f2f2ee;">
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a href="https://www.evasionsrebelles.com" class="brand">Évasions Rebelles Japon</a>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="busan-tourism-app.html">Go Busan App</a></li>
+      <!-- Drapeaux langue -->
+      <li>
+        <a href="index.html" title="Français" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/Evasions-Rebelles-Coree/main/images/drapeau_fr.png" alt="Français" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+      <li>
+        <a href="index-en.html" title="English" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/Evasions-Rebelles-Coree/main/images/drapeau_en.png" alt="English" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+      <li>
+        <a href="index-kr.html" title="한국어" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/Evasions-Rebelles-Coree/main/images/drapeau_kr.png" alt="한국어" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO IMAGE CORÉE ── -->
+  <div class="hero">
+    <img src="images/coree-hero.jpg" alt="Paysage de Corée du Sud" />
+    <div class="hero-overlay"></div>
+    <div class="hero-text" style="left:50%; top:50%; transform:translate(-50%,-50%); text-align:center; bottom:auto;">
+      <h1>Évasions Rebelles Corée</h1>
+    </div>
+  </div>
+
+  <!-- ── STYLES SPÉCIFIQUES PAGE ── -->
+  <style>
+    .syp-intro {
+      max-width: 700px;
+      margin: 64px auto 16px;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .syp-intro .eyebrow {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #E8B84B;
+      margin-bottom: 14px;
+    }
+    .syp-intro h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: #111;
+      margin: 0 0 18px;
+      line-height: 1.2;
+    }
+    .syp-intro p {
+      color: #111;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 10px;
+    }
+
+    /* ── CARDS PRICING ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 56px auto 72px;
+      padding: 0 24px;
+    }
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 18px;
+      padding: 36px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .25s, transform .25s;
+      position: relative;
+    }
+    .pricing-card:hover {
+      border-color: #E8B84B;
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: #E8B84B;
+      background: #fffbf0;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #E8B84B, #f0c96a);
+      color: #0a0a0a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+    .pricing-card .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+    .pricing-card .card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #111;
+    }
+    .pricing-card .card-price {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #E8B84B;
+      line-height: 1;
+    }
+    .pricing-card .card-price span {
+      font-size: .9rem;
+      font-weight: 400;
+      color: #111;
+    }
+    .pricing-card .card-desc {
+      color: #111;
+      font-size: .9rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .pricing-card .card-perks {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .pricing-card .card-perks li {
+      color: #111;
+      font-size: .85rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pricing-card .card-perks li::before {
+      content: "✦";
+      color: #E8B84B;
+      font-size: .7rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── FORMULAIRE ── */
+    .syp-form-section {
+      max-width: 700px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+    }
+    .syp-form-section h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      color: #111;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .syp-form-section .form-subtitle {
+      text-align: center;
+      color: #111;
+      font-size: .9rem;
+      margin-bottom: 36px;
+    }
+    .syp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .form-group label {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #111;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: #f7f7f7;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      color: #111;
+      font-size: .95rem;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      font-family: inherit;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #111;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #E8B84B;
+      background: #fffbf0;
+    }
+    .form-group select option {
+      background: #0d1b2e;
+      color: #111;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .syp-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #E8B84B;
+      color: #0a0a0a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .95rem;
+      letter-spacing: .04em;
+      padding: 16px 36px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+      margin-top: 8px;
+      align-self: center;
+    }
+    .syp-submit-btn:hover {
+      background: #f0c96a;
+      transform: translateY(-2px);
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 28px;
+      background: #fffbf0;
+      border: 1px solid #E8B84B;
+      border-radius: 14px;
+      color: #E8B84B;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    /* separator */
+    .syp-divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #E8B84B, transparent);
+      margin: 0 auto 56px;
+    }
+  </style>
+
+  <!-- ── INTRO CONCEPT ── -->
+  <div class="syp-intro">
+    <span class="eyebrow">Partenaires Go Busan</span>
+    <h2>Votre établissement, visible par des milliers de voyageurs</h2>
+    <p>Go Busan répertorie les meilleurs lieux de la ville — restaurants, cafés, hôtels, activités. Inscrivez votre établissement et touchez directement les voyageurs qui explorent Busan depuis leur téléphone.</p>
+    <p>Choisissez la formule qui correspond à votre stratégie. Pas d'engagement forcé, pas de commission sur vos ventes.</p>
+  </div>
+
+  <!-- ── PRICING CARDS ── -->
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <div class="card-icon">📅</div>
+      <div class="card-title">Mensuel</div>
+      <div class="card-price">9 900 ₩ <span>/ mois</span></div>
+      <p class="card-desc">Votre listing actif tant que vous payez. Idéal pour tester la visibilité sans engagement long terme.</p>
+      <ul class="card-perks">
+        <li>Fiche établissement complète</li>
+        <li>Photos & description</li>
+        <li>Lien vers votre site ou Maps</li>
+        <li>Résiliable à tout moment</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="card-icon">📆</div>
+      <div class="card-title">Annuel</div>
+      <div class="card-price">89 000 ₩ <span>/ an</span></div>
+      <p class="card-desc">Économisez 15 % par rapport au mensuel. Un an de visibilité continue, idéal pour ancrer votre présence.</p>
+      <ul class="card-perks">
+        <li>Tout le contenu du plan Mensuel</li>
+        <li>Économie de 15 % incluse</li>
+        <li>Priorité de traitement de la fiche</li>
+        <li>Badge "Partenaire vérifié"</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-badge">⚡ Offre limitée</div>
+      <div class="card-icon">♾️</div>
+      <div class="card-title">À vie</div>
+      <div class="card-price">249 000 ₩ <span>une fois</span></div>
+      <p class="card-desc">Payez une seule fois, restez visible pour toujours. Disponible uniquement pour les premiers partenaires fondateurs.</p>
+      <ul class="card-perks">
+        <li>Listing permanent sans renouvellement</li>
+        <li>Badge "Fondateur" exclusif</li>
+        <li>Mise en avant prioritaire</li>
+        <li>Places limitées</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="syp-divider"></div>
+
+  <!-- ── FORMULAIRE ── -->
+  <div class="syp-form-section">
+    <h3>Inscrivez votre établissement</h3>
+    <p class="form-subtitle">Remplissez ce formulaire — nous reviendrons vers vous sous 48 h.</p>
+
+    <div class="form-success" id="formSuccess">
+      ✦ Votre demande a bien été envoyée. À très vite !
+    </div>
+
+    <form class="syp-form" id="sypForm">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nom">Nom de l'établissement *</label>
+          <input type="text" id="nom" name="Établissement" placeholder="Ex : Café Hanok" required />
+        </div>
+        <div class="form-group">
+          <label for="type">Type d'établissement *</label>
+          <select id="type" name="Type" required>
+            <option value="" disabled selected>Choisir…</option>
+            <option>Restaurant</option>
+            <option>Café / Bar</option>
+            <option>Hôtel / Guesthouse</option>
+            <option>Activité / Expérience</option>
+            <option>Boutique / Shopping</option>
+            <option>Spa / Bien-être</option>
+            <option>Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-nom">Votre nom *</label>
+          <input type="text" id="contact-nom" name="Contact" placeholder="Prénom Nom" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse e-mail *</label>
+          <input type="email" id="email" name="Email" placeholder="vous@exemple.com" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tel">Téléphone</label>
+          <input type="tel" id="tel" name="Téléphone" placeholder="+82 10 0000 0000" />
+        </div>
+        <div class="form-group">
+          <label for="offre">Offre envisagée *</label>
+          <select id="offre" name="Offre" required>
+            <option value="" disabled selected>Choisir…</option>
+            <option>Mensuel — 9 900 ₩/mois</option>
+            <option>Annuel — 89 000 ₩/an</option>
+            <option>À vie — 249 000 ₩ (Offre limitée)</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adresse">Adresse à Busan</label>
+        <input type="text" id="adresse" name="Adresse" placeholder="Quartier, rue…" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message (optionnel)</label>
+        <textarea id="message" name="Message" placeholder="Décrivez votre établissement, posez une question…"></textarea>
+      </div>
+
+      <button type="button" class="syp-submit-btn" id="sypSubmitBtn" onclick="sendForm()">
+        ✦ Envoyer ma demande
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function sendForm() {
+      const form = document.getElementById('sypForm');
+      const btn = document.getElementById('sypSubmitBtn');
+      const success = document.getElementById('formSuccess');
+
+      const required = form.querySelectorAll('[required]');
+      for (const field of required) {
+        if (!field.value.trim()) {
+          field.focus();
+          field.style.borderColor = '#e05c5c';
+          setTimeout(() => field.style.borderColor = '', 2000);
+          return;
+        }
+      }
+
+      btn.textContent = '⏳ Envoi en cours…';
+      btn.disabled = true;
+
+      const params = {
+        'Établissement': document.getElementById('nom').value,
+        'Type':          document.getElementById('type').value,
+        'Contact':       document.getElementById('contact-nom').value,
+        'Email':         document.getElementById('email').value,
+        'Téléphone':     document.getElementById('tel').value,
+        'Offre':         document.getElementById('offre').value,
+        'Adresse':       document.getElementById('adresse').value,
+        'Message':       document.getElementById('message').value,
+      };
+
+      emailjs.send('service_skw6b8l', 'template_oak416c', params)
+        .then(() => {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        })
+        .catch((err) => {
+          console.error('EmailJS error:', err);
+          btn.textContent = '✦ Envoyer ma demande';
+          btn.disabled = false;
+          alert('Une erreur est survenue. Veuillez réessayer.');
+        });
+    }
+  </script>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2025 Évasions Rebelles Corée — Tous droits réservés</p>
+  </footer>
+
+</body>
+</html>
