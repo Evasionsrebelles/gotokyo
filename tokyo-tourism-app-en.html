@@ -11,14 +11,14 @@
   <meta name="keywords" content="Go Tokyo app, Tokyo tourism app, interactive map Tokyo, visit Tokyo Android, Tokyo tourist sites, Japan travel app, Tokyo pocket guide, free Android app, MapLibre Tokyo, Tokyo offline, geolocation Tokyo, Tokyo tourism filters, Tokyo hotspots, Tokyo neighborhoods, Shibuya map, Shinjuku app, Asakusa map, Tokyo accessibility, Tokyo place listing, Tokyo multilingual, French Japan app, Tokyo travel Android, download Go Tokyo, Google Play Tokyo, mobile app Japan, Tokyo must-see" />
   <meta name="author" content="Évasions Rebelles" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://evasionsrebelles.github.io/gotokyo/index-en.html" />
+  <link rel="canonical" href="https://evasionsrebelles.github.io/gotokyo/tokyo-tourism-app-en.html" />
 
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Go Tokyo App — The interactive tourism app to explore Tokyo" />
   <meta property="og:description" content="Go Tokyo is a free Android app with an interactive map, advanced filters and detailed listings for all tourist sites in Tokyo." />
-  <meta property="og:url" content="https://evasionsrebelles.github.io/gotokyo/index-en.html" />
+  <meta property="og:url" content="https://evasionsrebelles.github.io/gotokyo/tokyo-tourism-app-en.html" />
   <meta property="og:image" content="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/tokyo-app-hero.jpg" />
   <meta property="og:site_name" content="Go Tokyo" />
 
@@ -42,8 +42,8 @@
       "priceCurrency": "USD"
     },
     "description": "Go Tokyo is a free Android app with an interactive MapLibre map, advanced filters and detailed listings for all tourist sites in Tokyo.",
-    "inLanguage": ["fr", "en", "ja"],
-    "url": "https://evasionsrebelles.github.io/gotokyo/index-en.html",
+    "inLanguage": ["fr", "en", "ja", "it", "es", "de"],
+    "url": "https://evasionsrebelles.github.io/gotokyo/tokyo-tourism-app-en.html",
     "author": {
       "@type": "Organization",
       "name": "Évasions Rebelles",
@@ -103,6 +103,20 @@
       flex-shrink: 0;
       white-space: nowrap;
     }
+    nav .submit-link {
+      font-family: 'Syne', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f5efe6;
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.3s, color 0.3s;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    nav .submit-link:hover { opacity: 1; color: #e8c97a; }
     nav ul {
       list-style: none;
       display: flex;
@@ -125,24 +139,28 @@
       white-space: nowrap;
     }
     nav ul a:hover { opacity: 1; color: #e8c97a; }
-    
+
     .flag-toggle {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       align-items: center;
     }
     .flag-btn {
-      background: none;
-      border: none;
-      cursor: pointer;
-      opacity: 0.7;
+      display: flex;
+      align-items: center;
+      opacity: 0.8;
       transition: opacity 0.3s;
-      padding: 0;
-      font-size: 1.2rem;
+      text-decoration: none;
     }
-    .flag-btn:hover { opacity: 1; }
-    .flag-btn.active { opacity: 1; }
-    
+    .flag-btn:hover, .flag-btn.active { opacity: 1; }
+    .flag-btn img {
+      width: 24px;
+      height: 18px;
+      border-radius: 2px;
+      display: block;
+      object-fit: cover;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 0 1rem; gap: 0.6rem; }
       nav ul { gap: 0.8rem; }
@@ -548,22 +566,25 @@
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="brand">GO TOKYO</a>
+    <a href="submit-your-place-en.html" class="submit-link">Submit your place</a>
     <ul>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#filters">Filters</a></li>
-      <li><a href="#langues">Languages</a></li>
       <li class="flag-toggle">
-        <a href="index.html" class="flag-btn" title="Français">🇫🇷</a>
-        <a href="index-en.html" class="flag-btn active" title="English">🇬🇧</a>
-        <a href="index-jp.html" class="flag-btn" title="日本語">🇯🇵</a>
+        <a href="tokyo-tourism-app.html" class="flag-btn" title="Français">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/drapeau_fr.png" alt="Français" />
+        </a>
+        <a href="tokyo-tourism-app-en.html" class="flag-btn active" title="English">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/drapeau_en.png" alt="English" />
+        </a>
+        <a href="tokyo-tourism-app-jp.html" class="flag-btn" title="日本語">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/jp.png" alt="日本語" />
+        </a>
       </li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
-    <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/tokyo-hero.jpg" alt="Tokyo skyline" class="hero-img" />
+    <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/tokyo-app-hero.jpg" alt="Tokyo skyline" class="hero-img" />
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="hero-tag">Free Application</span>
@@ -584,7 +605,7 @@
         <div class="stat-label">filter criteria</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">3</div>
+        <div class="stat-num">6</div>
         <div class="stat-label">languages</div>
       </div>
     </div>
@@ -659,12 +680,15 @@
   <!-- LANGUAGES -->
   <section class="lang-section" id="langues">
     <span class="eyebrow">Multilingual</span>
-    <h2>3 languages, complete interface</h2>
-    <p>The entire interface — filters, place details, error messages, menus — is available in three languages.</p>
+    <h2>6 languages, complete interface</h2>
+    <p>The entire interface — filters, place details, error messages, menus — is available in six languages.</p>
     <div class="lang-row">
       <div class="lang-pill">🇫🇷 Français</div>
       <div class="lang-pill">🇬🇧 English</div>
       <div class="lang-pill">🇯🇵 日本語</div>
+      <div class="lang-pill">🇮🇹 Italiano</div>
+      <div class="lang-pill">🇪🇸 Español</div>
+      <div class="lang-pill">🇩🇪 Deutsch</div>
     </div>
   </section>
 
