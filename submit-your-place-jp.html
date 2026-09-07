@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>掲載のお申し込み — Évasions Rebelles Japon</title>
+
+  <!-- ── SEO ── -->
+  <meta name="description" content="東京・日本でお気に入りの場所をÉvasions Rebellesコミュニティに紹介しませんか。" />
+  <meta name="author" content="Évasions Rebelles" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://evasionsrebelles.github.io/gotokyo/submit-your-place-jp.html" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="掲載のお申し込み — Évasions Rebelles Japon" />
+  <meta property="og:description" content="東京・日本でお気に入りの場所をÉvasions Rebellesコミュニティに紹介しませんか。" />
+  <meta property="og:url" content="https://evasionsrebelles.github.io/gotokyo/submit-your-place-jp.html" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/japon-hero.jpg" />
+  <meta property="og:site_name" content="Évasions Rebelles Japon" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="掲載のお申し込み — Évasions Rebelles Japon" />
+  <meta name="twitter:description" content="東京・日本でお気に入りの場所をÉvasions Rebellesコミュニティに紹介しませんか。" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/japon-hero.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init("Uwx7f0RoWs4rnGK4d");</script>
+</head>
+<body style="display:flex; flex-direction:column; min-height:100vh; background:#f2f2ee;">
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a href="https://www.evasionsrebelles.com" class="brand">Évasions Rebelles Japon</a>
+    <ul>
+      <li><a href="index-jp.html">ホーム</a></li>
+      <li><a href="tokyo-tourism-app-jp.html">GoTokyo App</a></li>
+      <!-- 言語選択 -->
+      <li>
+        <a href="index.html" title="Français" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/drapeau_fr.png" alt="Français" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+      <li>
+        <a href="index-en.html" title="English" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/drapeau_en.png" alt="English" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+      <li>
+        <a href="index-jp.html" title="日本語" style="display:flex; align-items:center; opacity:0.85; transition:opacity 0.3s; text-decoration:none;">
+          <img src="https://raw.githubusercontent.com/Evasionsrebelles/gotokyo/main/images/jp.png" alt="日本語" width="24" height="18" style="border-radius:2px; display:block;" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO IMAGE 日本 ── -->
+  <div class="hero">
+    <img src="images/japon-hero.jpg" alt="日本の風景" />
+    <div class="hero-overlay"></div>
+    <div class="hero-text" style="left:50%; top:50%; transform:translate(-50%,-50%); text-align:center; bottom:auto;">
+      <h1>Évasions Rebelles Japon</h1>
+    </div>
+  </div>
+
+  <!-- ── PAGE 固有スタイル ── -->
+  <style>
+    .syp-intro {
+      max-width: 700px;
+      margin: 64px auto 16px;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .syp-intro .eyebrow {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #E8B84B;
+      margin-bottom: 14px;
+    }
+    .syp-intro h2 {
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: #111;
+      margin: 0 0 18px;
+      line-height: 1.2;
+    }
+    .syp-intro p {
+      color: #111;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 10px;
+    }
+
+    /* ── PRICING CARDS ── */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 56px auto 72px;
+      padding: 0 24px;
+    }
+    .pricing-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 18px;
+      padding: 36px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .25s, transform .25s;
+      position: relative;
+    }
+    .pricing-card:hover {
+      border-color: #E8B84B;
+      transform: translateY(-4px);
+    }
+    .pricing-card.featured {
+      border-color: #E8B84B;
+      background: #fffbf0;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #E8B84B, #f0c96a);
+      color: #0a0a0a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+    .pricing-card .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+    .pricing-card .card-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: #111;
+    }
+    .pricing-card .card-price {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #E8B84B;
+      line-height: 1;
+    }
+    .pricing-card .card-price span {
+      font-size: .9rem;
+      font-weight: 400;
+      color: #111;
+    }
+    .pricing-card .card-desc {
+      color: #111;
+      font-size: .9rem;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .pricing-card .card-perks {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .pricing-card .card-perks li {
+      color: #111;
+      font-size: .85rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .pricing-card .card-perks li::before {
+      content: "✦";
+      color: #E8B84B;
+      font-size: .7rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── FORM ── */
+    .syp-form-section {
+      max-width: 700px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+    }
+    .syp-form-section h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      color: #111;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .syp-form-section .form-subtitle {
+      text-align: center;
+      color: #111;
+      font-size: .9rem;
+      margin-bottom: 36px;
+    }
+    .syp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 560px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .form-group label {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #111;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: #f7f7f7;
+      border: 1px solid #d0d0d0;
+      border-radius: 10px;
+      color: #111;
+      font-size: .95rem;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      font-family: inherit;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #111;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #E8B84B;
+      background: #fffbf0;
+    }
+    .form-group select option {
+      background: #0d1b2e;
+      color: #111;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .syp-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #E8B84B;
+      color: #0a0a0a;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .95rem;
+      letter-spacing: .04em;
+      padding: 16px 36px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+      margin-top: 8px;
+      align-self: center;
+    }
+    .syp-submit-btn:hover {
+      background: #f0c96a;
+      transform: translateY(-2px);
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 28px;
+      background: #fffbf0;
+      border: 1px solid #E8B84B;
+      border-radius: 14px;
+      color: #E8B84B;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    /* separator */
+    .syp-divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, #E8B84B, transparent);
+      margin: 0 auto 56px;
+    }
+  </style>
+
+  <!-- ── INTRO CONCEPT ── -->
+  <div class="syp-intro">
+    <span class="eyebrow">GoTokyo パートナー</span>
+    <h2>あなたのお店を、何千人もの旅行者へ</h2>
+    <p>GoTokyoは東京の魅力あるスポット—レストラン、カフェ、ホテル、アクティビティ—を紹介するアプリです。お店を掲載して、スマートフォンで東京を探検する旅行者に直接アプローチしましょう。</p>
+    <p>あなたの戦略に合ったプランをお選びください。強制的な契約や売上手数料は一切ありません。</p>
+  </div>
+
+  <!-- ── PRICING CARDS ── -->
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <div class="card-icon">📅</div>
+      <div class="card-title">月額プラン</div>
+      <div class="card-price">¥1,200 <span>/ 月</span></div>
+      <p class="card-desc">お支払いいただいている間、掲載が有効です。長期契約なしで露出効果を試すのに最適です。</p>
+      <ul class="card-perks">
+        <li>店舗情報の完全掲載</li>
+        <li>写真＆説明文</li>
+        <li>公式サイトまたはMapsへのリンク</li>
+        <li>いつでも解約可能</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="card-icon">📆</div>
+      <div class="card-title">年間プラン</div>
+      <div class="card-price">¥12,000 <span>/ 年</span></div>
+      <p class="card-desc">月額プランに比べて15%お得。1年間継続的に露出でき、しっかりと存在感を確立するのに最適です。</p>
+      <ul class="card-perks">
+        <li>月額プランの内容をすべて含む</li>
+        <li>15%割引付き</li>
+        <li>掲載申請の優先処理</li>
+        <li>「認証パートナー」バッジ</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-badge">⚡ 期間限定</div>
+      <div class="card-icon">♾️</div>
+      <div class="card-title">生涯プラン</div>
+      <div class="card-price">¥35,000 <span>一括払い</span></div>
+      <p class="card-desc">一度のお支払いで、ずっと掲載され続けます。初期パートナー限定の特別プランです。</p>
+      <ul class="card-perks">
+        <li>更新不要の永久掲載</li>
+        <li>限定「創業パートナー」バッジ</li>
+        <li>優先的な露出</li>
+        <li>枠数限定</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="syp-divider"></div>
+
+  <!-- ── FORM ── -->
+  <div class="syp-form-section">
+    <h3>お店を掲載する</h3>
+    <p class="form-subtitle">こちらのフォームにご記入ください。48時間以内にご連絡いたします。</p>
+
+    <div class="form-success" id="formSuccess">
+      ✦ お申し込みを受け付けました。追ってご連絡いたします。
+    </div>
+
+    <form class="syp-form" id="sypForm">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nom">店舗名 *</label>
+          <input type="text" id="nom" name="Établissement" placeholder="例：Café Sakura" required />
+        </div>
+        <div class="form-group">
+          <label for="type">業種 *</label>
+          <select id="type" name="Type" required>
+            <option value="" disabled selected>選択してください…</option>
+            <option>レストラン</option>
+            <option>カフェ / バー</option>
+            <option>ホテル / ゲストハウス</option>
+            <option>アクティビティ / 体験</option>
+            <option>ショップ / ショッピング</option>
+            <option>スパ / ウェルネス</option>
+            <option>その他</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact-nom">お名前 *</label>
+          <input type="text" id="contact-nom" name="Contact" placeholder="姓 名" required />
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス *</label>
+          <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" name="Téléphone" placeholder="+81 90 0000 0000" />
+        </div>
+        <div class="form-group">
+          <label for="offre">希望プラン *</label>
+          <select id="offre" name="Offre" required>
+            <option value="" disabled selected>選択してください…</option>
+            <option>月額プラン — ¥1,200/月</option>
+            <option>年間プラン — ¥12,000/年</option>
+            <option>生涯プラン — ¥35,000（期間限定）</option>
+            <option>まだ決めていない</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adresse">東京での所在地</label>
+        <input type="text" id="adresse" name="Adresse" placeholder="エリア、住所…" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">メッセージ（任意）</label>
+        <textarea id="message" name="Message" placeholder="店舗の紹介やご質問などをご記入ください…"></textarea>
+      </div>
+
+      <button type="button" class="syp-submit-btn" id="sypSubmitBtn" onclick="sendForm()">
+        ✦ 送信する
+      </button>
+    </form>
+  </div>
+
+  <script>
+    function sendForm() {
+      const form = document.getElementById('sypForm');
+      const btn = document.getElementById('sypSubmitBtn');
+      const success = document.getElementById('formSuccess');
+
+      const required = form.querySelectorAll('[required]');
+      for (const field of required) {
+        if (!field.value.trim()) {
+          field.focus();
+          field.style.borderColor = '#e05c5c';
+          setTimeout(() => field.style.borderColor = '', 2000);
+          return;
+        }
+      }
+
+      btn.textContent = '⏳ 送信中…';
+      btn.disabled = true;
+
+      const params = {
+        'Établissement': document.getElementById('nom').value,
+        'Type':          document.getElementById('type').value,
+        'Contact':       document.getElementById('contact-nom').value,
+        'Email':         document.getElementById('email').value,
+        'Téléphone':     document.getElementById('tel').value,
+        'Offre':         document.getElementById('offre').value,
+        'Adresse':       document.getElementById('adresse').value,
+        'Message':       document.getElementById('message').value,
+      };
+
+      emailjs.send('service_skw6b8l', 'template_oak416c', params)
+        .then(() => {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        })
+        .catch((err) => {
+          console.error('EmailJS error:', err);
+          btn.textContent = '✦ 送信する';
+          btn.disabled = false;
+          alert('エラーが発生しました。もう一度お試しください。');
+        });
+    }
+  </script>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© 2025 Évasions Rebelles Japon — 全著作権所有</p>
+  </footer>
+
+</body>
+</html>
